@@ -1,0 +1,20 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    color:#ffffff;
+    background-color:#222;
+}
+.top-tracks a {
+    color:rgb(164, 208, 247);
+    text-decoration:none;
+    transition: 0.3s;
+}
+.top-tracks a:hover {
+    color:#ffffff;
+}
+.nav-link {
+    color:#ffffff;
+    transition:0.4s;
+}
+.nav-link:hover {
+    color:grey
+}
