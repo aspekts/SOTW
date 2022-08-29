@@ -5,7 +5,7 @@
 	client_secret:config.spotifyCS,
  });
  var getStats = async function (){
-        const info =  await fetch(`http://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=aspekts&limit=5&period=7day&api_key=4fbdd023fb9f3a2d4471128f7c29724d&format=json`).then(res => res.json());
+        const info =  await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=aspekts&limit=5&period=7day&api_key=4fbdd023fb9f3a2d4471128f7c29724d&format=json`).then(res => res.json());
 		const tracks = info.toptracks.track;
         document.getElementById("top-tracks").innerHTML = "";
         for (let i = 0; i < tracks.length; i++) {
