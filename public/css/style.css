@@ -18,3 +18,15 @@ body {
 .nav-link:hover {
     color:grey
 }
+iframe {
+    display: block;
+    transition: opacity 0.125s;
+    .js & {
+      opacity: 0;
+      
+      &.loaded {
+        opacity: 1;
+      }
+    }
+  }
+
