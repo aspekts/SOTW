@@ -18,7 +18,14 @@ body {
 .nav-link:hover {
     color:grey
 }
-iframe {
+.spotify-embed {
+  background: #282828;
+  
+  &:not(:last-of-type) {
+    margin-bottom: 5px;
+  }
+  
+  iframe {
     display: block;
     transition: opacity 0.125s;
     .js & {
@@ -29,4 +36,5 @@ iframe {
       }
     }
   }
+}
 
