@@ -8624,12 +8624,11 @@ function exit(message, color) {
 },{"_process":4,"core-js/modules/es.object.define-property.js":167}],203:[function(require,module,exports){
 module.exports={
     "spotifyCID":"4f83f09f42204f44bfc2fc097cab5263",
-    "spotifyCS":"94c66e3182aa414e9907ac5ba53b062d",
-    "APIKEY":"5010c49eb0bd3dd169dda9269ea5f518"
+    "spotifyCS":"94c66e3182aa414e9907ac5ba53b062d"
 }
 },{}],204:[function(require,module,exports){
  const {Spotify} = require("statisfy-browser");
- const config = require("../config.json");
+ const config = require("./config.json");
  const spt = new Spotify({
 	client_id:config.spotifyCID,
 	client_secret:config.spotifyCS,
@@ -8641,7 +8640,7 @@ module.exports={
         for (let i = 0; i < tracks.length; i++) {
 			const body =  await spt.search({query: tracks[i].artist.name + " " + tracks[i].name, type:"track", limit:1});
             const track = body.tracks.items[0];
-            document.getElementById("top-tracks").innerHTML += `<br> <br><img src="https://aspekts.dev/img/${i+1}.png"> - <a href="${track.external_urls.spotify}"> ${tracks[i].name} by ${tracks[i].artist.name}</a><br><br><iframe src="https://open.spotify.com/embed/track/${track.id}" width="1000" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;   
+            document.getElementById("top-tracks").innerHTML += `<br> <br><img src="https://aspekts.dev/img/${i+1}.png"> - <a href="${track.external_urls.spotify}"> ${tracks[i].name} by ${tracks[i].artist.name}</a><br><br><div class="spotify-embed"><iframe src="https://open.spotify.com/embed/track/${track.id}" width="1000" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>`;   
               };
         };
         getStats();
@@ -8649,4 +8648,4 @@ module.exports={
 
 
 
-},{"../config.json":203,"statisfy-browser":201}]},{},[204]);
+},{"./config.json":203,"statisfy-browser":201}]},{},[204]);

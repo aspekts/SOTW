@@ -1,5 +1,5 @@
  const {Spotify} = require("statisfy-browser");
- const config = require("../config.json");
+ const config = require("./config.json");
  const spt = new Spotify({
 	client_id:config.spotifyCID,
 	client_secret:config.spotifyCS,
