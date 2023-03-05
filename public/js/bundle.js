@@ -8640,7 +8640,7 @@ module.exports={
         for (let i = 0; i < tracks.length; i++) {
 			const body =  await spt.search({query: tracks[i].artist.name + " " + tracks[i].name, type:"track", limit:1});
             const track = body.tracks.items[0];
-            document.getElementById("top-tracks").innerHTML += `<br> <br><img src="https://aspekts.dev/img/${i+1}.png"> - <a href="${track.external_urls.spotify}"> ${tracks[i].name} by ${tracks[i].artist.name}</a><br><br><div class="spotify-embed"><iframe src="https://open.spotify.com/embed/track/${track.id}" width="1000" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>`;   
+            document.getElementById("top-tracks").innerHTML += `<br> <br><img src="https://aspekts.dev/img/${i+1}.png"> - <a href="${track.external_urls.spotify}"> ${tracks[i].name} by ${tracks[i].artist.name}</a><br><br><div class="spotify-embeds"><iframe src="https://open.spotify.com/embed/track/${track.id}" width="1000" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>`;   
               };
         };
         getStats();
