@@ -60,18 +60,16 @@
 </footer>
 </body>
 <script>
-  $(window).on('load', function () {
-    $('#loading').hide();
-  }) 
-  $(window).on('load resize', function() {
+$(document).ready(function(){
   $('iframe[src*="embed.spotify.com"]').each( function() {
-    $(this).css('width', $(this).parent().css('width'));
-    $(this).attr('src', $(this).attr('src'));
-    $(this).removeClass('loaded');
-    
-    $(this).on('load', function(){
-      $(this).addClass('loaded');
-    });
+    $(this).css('width',$(this).parent(1).css('width'));
+    $(this).attr('src',$(this).attr('src'));
+  });
+});
+$(window).resize(function() {
+  $('iframe[src*="embed.spotify.com"]').each( function() {
+    $(this).css('width',$(this).parent(1).css('width'));
+    $(this).attr('src',$(this).attr('src'));
   });
 });
 </script>
