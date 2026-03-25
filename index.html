@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aspekts' Song of the Week</title>
+  <meta name="description" content="Aspekts' top 5 most listened-to songs this week, powered by Last.fm and Spotify.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="nav-logo" href="https://aspekts.dev/">
+      <img src="https://aspekts.dev/img/whitelogo_tp.png" alt="Aspekts" height="28">
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://aspekts.dev/">Portfolio</a></li>
+      <li><a href="https://links.aspekts.dev/">Links</a></li>
+      <li><a href="https://aspekts.dev/contact/">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="main">
+    <header class="hero">
+      <span class="hero-badge">Updated weekly</span>
+      <h1 class="hero-title">Top 5 Songs of the Week</h1>
+      <p class="hero-date" id="hero-date"></p>
+    </header>
+
+    <div id="track-list" class="track-list" aria-live="polite" aria-label="Top tracks">
+      <div class="track-card skeleton" aria-hidden="true">
+        <div class="skeleton-rank"></div>
+        <div class="skeleton-body">
+          <div class="skeleton-line wide"></div>
+          <div class="skeleton-line narrow"></div>
+          <div class="skeleton-embed"></div>
+        </div>
+      </div>
+      <div class="track-card skeleton" aria-hidden="true">
+        <div class="skeleton-rank"></div>
+        <div class="skeleton-body">
+          <div class="skeleton-line wide"></div>
+          <div class="skeleton-line narrow"></div>
+          <div class="skeleton-embed"></div>
+        </div>
+      </div>
+      <div class="track-card skeleton" aria-hidden="true">
+        <div class="skeleton-rank"></div>
+        <div class="skeleton-body">
+          <div class="skeleton-line wide"></div>
+          <div class="skeleton-line narrow"></div>
+          <div class="skeleton-embed"></div>
+        </div>
+      </div>
+      <div class="track-card skeleton" aria-hidden="true">
+        <div class="skeleton-rank"></div>
+        <div class="skeleton-body">
+          <div class="skeleton-line wide"></div>
+          <div class="skeleton-line narrow"></div>
+          <div class="skeleton-embed"></div>
+        </div>
+      </div>
+      <div class="track-card skeleton" aria-hidden="true">
+        <div class="skeleton-rank"></div>
+        <div class="skeleton-body">
+          <div class="skeleton-line wide"></div>
+          <div class="skeleton-line narrow"></div>
+          <div class="skeleton-embed"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>
+      &copy; Aspekts 2025 &mdash;
+      Music data from <a href="https://last.fm">Last.fm</a> &amp; <a href="https://spotify.com">Spotify</a>
+    </p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
